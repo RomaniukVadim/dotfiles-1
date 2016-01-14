@@ -40,5 +40,3 @@ function! AirlineInit()
   let g:airline_section_z = airline#section#create(['%l/%L'])
 endfunction
 :au User AirlineAfterInit call AirlineInit()
-:au BufNewFile,BufRead *Pkgfile set ft=sh
-:au BufNewFile,BufRead *.h,*.m set ft=objc
