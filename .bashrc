@@ -8,4 +8,4 @@
 PATH=~/bin:$PATH
 
 alias ls='ls --color=auto'
-PS1='\[\e[0;36m\]\t\[\e[m\] [\W]> '
+PS1='\[\e[1;30m\]aki \[\e[0;32m\]\W\[\e[m\] > '
