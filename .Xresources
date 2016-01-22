@@ -1,44 +1,23 @@
+#include "/home/akio/.colors/blackburn"
+
 urxvt*cursorBlink:		true
 urxvt*scrollBar:		false
-URxvt.internalBorder: 10
+URxvt.internalBorder: 3
 urxvt*dynamicColors: on
 urxvt*saveLines: 65535
 urxvt.fading: 0
 URxvt*loginShell: true
 urxvt*lineSpace: 2
 Xcursor.size: 16
-!URxvt.letterSpace: 1
-URxvt*geometry: 65x17
+URxvt.letterSpace: 0
+URxvt*geometry: 80x18
 
 
-URxvt*font:xft:terminus:hinting=true:pixelsize=9:antialias=false
-URxvt*boldFont:xft:terminus:style=bold:hinting=true:pixelsize=9:antialias=false
-URxvt*italicFont:terminus:style=italic:hinting=true:pixelsize=9:antialias=false
-URxvt*boldItalicFont:xft:terminus:style=bolditalic:hinting=true:pixelsize=9:antialias=false
 
-
-*background: #1D2426
-*foreground: #8FA388
-! Alternate foreground
-!*foreground: #AB9C71
-*cursorColor: #8FA388
-
-*color0:  #39474A
-*color1:  #986345
-*color2:  #788249
-*color3:  #9B6A46
-*color4:  #3E5951
-*color5:  #B9924A
-*color6:  #5d796a
-*color7:  #977D5E
-*color8:  #4C5F63
-*color9:  #B07350
-*color10: #869151
-*color11: #AF6B42
-*color12: #567A6E
-*color13: #D69D55
-*color14: #668574
-*color15: #AB9C71
+URxvt*font:xft:tewi:hinting=true:pixelsize=9:antialias=false
+URxvt*boldFont:xft:tewi:style=bold:hinting=true:pixelsize=9:antialias=false
+URxvt*italicFont:tewi:style=italic:hinting=true:pixelsize=9:antialias=false
+URxvt*boldItalicFont:xft:tewi:style=bolditalic:hinting=true:pixelsize=9:antialias=false
 
 !Enables copy/paste with Ctrl-Shift-C/V
 URxvt.iso14755: false
@@ -46,3 +25,4 @@ URxvt.iso14755_52: false
 URxvt.perl-ext-common: default,clipboard
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
