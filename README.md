@@ -1,7 +1,7 @@
 # dotfiles
 
 ## #netbook
-![netbook_screenshot](https://github.com/SheenV/dotfiles/raw/master/sc.png)
+![netbook_screenshot](https://github.com/SheenV/dotfiles/raw/master/sc1.png)
 
 ##My Setup
     Linux Distro: arch
