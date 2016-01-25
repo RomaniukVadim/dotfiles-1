@@ -6,7 +6,7 @@
 ##My Setup
     Linux Distro: arch
     Window Manager: openbox
-    Bar: tint2
+    Bar: lemonbar + tint2
     Launcher: Rofi
     Terminal Emulator: urxvt
     Shell: bash
