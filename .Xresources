@@ -1,0 +1,28 @@
+#include "/home/akio/.colors/blackburn"
+
+urxvt*cursorBlink:		true
+urxvt*scrollBar:		false
+URxvt.internalBorder: 3
+urxvt*dynamicColors: on
+urxvt*saveLines: 65535
+urxvt.fading: 0
+URxvt*loginShell: true
+urxvt*lineSpace: 2
+Xcursor.size: 16
+URxvt.letterSpace: 0
+URxvt*geometry: 80x18
+
+
+
+URxvt*font:xft:tewi:hinting=true:pixelsize=9:antialias=false
+URxvt*boldFont:xft:tewi:style=bold:hinting=true:pixelsize=9:antialias=false
+URxvt*italicFont:tewi:style=italic:hinting=true:pixelsize=9:antialias=false
+URxvt*boldItalicFont:xft:tewi:style=bolditalic:hinting=true:pixelsize=9:antialias=false
+
+!Enables copy/paste with Ctrl-Shift-C/V
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.perl-ext-common: default,clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+

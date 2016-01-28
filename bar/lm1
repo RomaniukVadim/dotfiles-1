@@ -1,0 +1,4 @@
+#!/bin/bash
+# test of bar
+
+~/bar/lmback | lemonbar -g "1266x30+20+10" -p -f "-*-lemon-*-*-*-10-*-*-*-*-*-*-*" | sh &

@@ -1,0 +1,23 @@
+#!/bin/bash
+# test config
+#colors
+
+BG="%{B#262626}"
+FG="%{F#F2F1F0}"
+
+# Define the clock
+Clock() {
+	DATETIME=$(date "+%T")
+
+echo -n " $DATETIME"
+}
+#Define the battery
+Battery() {
+	BATPERC=$(acpi --battery | cut -d, -f2)
+	echo "$BATPERC "
+}
+# Print the clock
+while true; do
+	echo "$BG$FG%{l}$(Clock)%{c}$(xtitle)$BG$FG%{r}$BG$FG$(Battery)"
+	sleep 1
+done
