@@ -1,23 +1,70 @@
 #!/bin/bash
 # test config
-#colors
-
+# Define the colors
 BG="%{B#262626}"
 FG="%{F#F2F1F0}"
+WH="%{F#F2F1F0}"
+FGB="%{F#22A7F0}" #blue
+# Define the workspace
+workspace() {
+	query=$(xdotool get_desktop)
+	echo "($query)"
+}
+# Define the wifi
+#ssid() {
+#	SSID=$(iwgetid -r)
+#	(( $? == 0 )) && echo -en "\uf1eb $SSID" || echo -en "$WARN\uf1eb OFF$BG"
+#}
 
 # Define the clock
 Clock() {
 	DATETIME=$(date "+%T")
-
-echo -n " $DATETIME"
+	echo -n " $DATETIME"
 }
 #Define the battery
 Battery() {
 	BATPERC=$(acpi --battery | cut -d, -f2)
 	echo "$BATPERC "
 }
-# Print the clock
+# Define the weekday
+WD=""
+weekday() {
+	WD=""
+	days=("Mon" "Tue" "Wed" "Thu" "Fri" "Sat" "Sun")
+	for i in {1..7}
+	do
+		if [ "$(date '+%u')" == "$i" ]
+		then
+			WD="$WD%{F#22A7F0}"
+		 else
+			 WD="$WD$WH"
+		 fi
+		 WD="$WD${days[i-1]}$WH "
+	done
+}
+# Print switch keyboard
+layout() {
+	xkb-switch -p
+}
+print_layout(){
+	if [[ $(xkb-switch) == us ]]; then
+		echo "us"
+	else
+		echo "ru"
+	fi
+}
+# Print Gmail
+#gmail(){
+#login=""
+#psswd=""
+#new=`curl -u ${login}:${psswd} -s "https://mail.google.com/mail/feed/atom" | grep -c "<entry>"`
+#echo $new
+#}
+
+# Print the bar
 while true; do
-	echo "$BG$FG%{l}$(Clock)%{c}$(xtitle)$BG$FG%{r}$BG$FG$(Battery)"
-	sleep 1
+	weekday
+	echo "$BG%{l} $FGB$(Clock)$FG | $(workspace) | %{A:firefox ~/work/index.html:} links %{A} %{A:firefox ~/book:} ~/book %{A}%{c}$(xtitle)$BG$FG%{r} | $(print_layout) | $WD$BG$FG | $(Battery)"
+	sleep .03s
 done
+
