@@ -3,7 +3,7 @@
 ## #netbook
 ![netbook_screenshot](https://github.com/SheenV/dotfiles/raw/master/sc3.png)
 
-##My Setup
+## My Setup
     Linux Distro: arch
     Window Manager: openbox
     Bar: lemonbar + tint2
